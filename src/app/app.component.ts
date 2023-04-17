@@ -9,9 +9,9 @@ import {AngularEmbedVideoService} from "angular-embed-video";
 export class AppComponent {
   title = 'Modul_152_Video';
 
-  youtubeUrl = 'https://www.youtube.com/watch?v=BM1J_cktJAw';
+  youtubeUrl = 'https://youtu.be/QYILrIzMEu0';
 
-  youtubeId = 'BM1J_cktJAw';
+  youtubeId = 'QYILrIzMEu0';
 
   constructor(private embedService: AngularEmbedVideoService) {
     console.log(this.embedService.embed(this.youtubeUrl));
