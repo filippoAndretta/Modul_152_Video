@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularEmbedVideoModule} from "angular-embed-video";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {NgImageSliderModule} from "ng-image-slider";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     BrowserAnimationsModule,
     AngularEmbedVideoModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
