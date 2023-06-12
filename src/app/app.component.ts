@@ -20,6 +20,14 @@ export class AppComponent {
     console.log(this.embedService.embed_youtube(this.youtubeId));
   }
 
+  infinite: boolean = true;
+  autoSlide: boolean = true;
+
+  toggleAutoSlide() {
+    this.infinite = !this.infinite;
+    this.autoSlide = !this.autoSlide;
+  }
+
   @ViewChild('nav') slider!: NgImageSliderComponent;
   imageObject = [
     {

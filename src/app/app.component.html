@@ -1,6 +1,6 @@
 <mat-toolbar>
   <span>Easter in Italy</span>
-  <span class="example-spacer"></span>
+  <span class="nav-spacer"></span>
   <mat-icon class="example-icon favorite-icon">egg</mat-icon>
 </mat-toolbar>
 
@@ -15,14 +15,20 @@
 
 <mat-toolbar>
   <span>Apprentice Day at Netcetera</span>
-  <span class="example-spacer"></span>
+  <span class="nav-spacer"></span>
 </mat-toolbar>
 <div>
   <ng-image-slider #nav
     [images]="imageObject"
-    [infinite]="true"
-    [autoSlide]="1"
+    [infinite]="infinite"
+    [autoSlide]="autoSlide"
     [imageSize]="{width: '15%', height: 180}"
-    slideImage="1">
+    slideImage="1"
+    [showArrow]="false">
   </ng-image-slider>
+  <div class="container">
+    <button mat-button color="primary" (click)="prevImageClick()">Prev</button>
+    <button mat-button color="primary" (click)="nextImageClick()">Next</button>
+    <button mat-button color="primary" (click)="toggleAutoSlide()">Infinite on/off</button>
+  </div>
 </div>

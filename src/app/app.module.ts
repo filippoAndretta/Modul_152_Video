@@ -7,6 +7,8 @@ import {AngularEmbedVideoModule} from "angular-embed-video";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgImageSliderModule} from "ng-image-slider";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {NgImageSliderModule} from "ng-image-slider";
     AngularEmbedVideoModule,
     MatIconModule,
     MatToolbarModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    MatSlideToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
