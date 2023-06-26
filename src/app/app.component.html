@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <mat-toolbar>
   <span>Easter in Italy</span>
   <span class="nav-spacer"></span>
@@ -32,3 +34,14 @@
     <button mat-button color="primary" (click)="toggleAutoSlide()">Infinite on/off</button>
   </div>
 </div>
+
+<mat-toolbar>
+  <span>Animation</span>
+  <span class="nav-spacer"></span>
+</mat-toolbar>
+<div>
+  <p>DAS IST EINE ANIMATION!!!</p>
+</div>
+<div [@fadeIn] *ngIf="isVisible" class="box"></div>
+<button (click)="toggleVisibility()">Toggle Visibility</button>
+

@@ -1,13 +1,31 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {AngularEmbedVideoService} from "angular-embed-video";
 import {NgImageSliderComponent} from "ng-image-slider";
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('500ms', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class AppComponent {
+  isVisible: boolean = false;
+
+  toggleVisibility() {
+    this.isVisible = !this.isVisible;
+  }
+
   title = 'Modul_152_Video';
 
   youtubeUrl = 'https://youtu.be/QYILrIzMEu0';
